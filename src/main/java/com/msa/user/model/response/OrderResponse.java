@@ -1,5 +1,6 @@
 package com.msa.user.model.response;
 
+import com.msa.user.model.entity.Order;
 import lombok.Getter;
 import lombok.ToString;
 
@@ -9,9 +10,26 @@ import java.time.LocalDateTime;
 @ToString
 public class OrderResponse {
     private Long orderId;
+    private Long productId;
     private Long userId;
-    private String orderStatus;
-    private LocalDateTime orderDate;
+    private Long orderQty;
+    private Long orderUnitPrice;
+    private Long orderTotalPrice;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
+
+    public static OrderResponse from(Order order) {
+        OrderResponse orderResponse = new OrderResponse();
+
+        orderResponse.orderId = order.getOrderId();
+        orderResponse.productId = order.getProductId();
+        orderResponse.userId = order.getUserId();
+        orderResponse.orderQty = order.getOrderQty();
+        orderResponse.orderUnitPrice = order.getOrderUnitPrice();
+        orderResponse.orderTotalPrice = order.getOrderTotalPrice();
+        orderResponse.createdAt = order.getCreatedAt();
+        orderResponse.updatedAt = order.getUpdatedAt();
+
+        return orderResponse;
+    }
 }
