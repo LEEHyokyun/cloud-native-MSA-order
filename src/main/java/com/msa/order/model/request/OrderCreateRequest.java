@@ -1,4 +1,4 @@
-package com.msa.user.model.request;
+package com.msa.order.model.request;
 
 import lombok.Getter;
 import lombok.ToString;
@@ -7,8 +7,6 @@ import lombok.ToString;
 @ToString
 public class OrderCreateRequest {
     private Long productId;
-    private Long userId;
     private Long orderQty;
     private Long orderUnitPrice;
-    private Long orderTotalPrice;
 }

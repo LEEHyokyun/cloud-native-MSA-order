@@ -1,9 +1,8 @@
-package com.msa.user.controller;
+package com.msa.order.controller;
 
-import com.msa.user.model.entity.Order;
-import com.msa.user.model.request.OrderCreateRequest;
-import com.msa.user.model.response.OrderResponse;
-import com.msa.user.service.OrderService;
+import com.msa.order.model.request.OrderCreateRequest;
+import com.msa.order.model.response.OrderResponse;
+import com.msa.order.service.OrderService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

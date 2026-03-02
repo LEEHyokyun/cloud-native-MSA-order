@@ -1,6 +1,6 @@
-package com.msa.user.model.response;
+package com.msa.order.model.response;
 
-import com.msa.user.model.entity.Order;
+import com.msa.order.model.entity.Order;
 import lombok.Getter;
 import lombok.ToString;
 

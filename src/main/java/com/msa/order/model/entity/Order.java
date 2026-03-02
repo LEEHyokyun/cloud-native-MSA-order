@@ -1,4 +1,4 @@
-package com.msa.user.model.entity;
+package com.msa.order.model.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

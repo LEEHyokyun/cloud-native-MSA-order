@@ -1,9 +1,9 @@
-package com.msa.user.service;
+package com.msa.order.service;
 
-import com.msa.user.model.entity.Order;
-import com.msa.user.model.request.OrderCreateRequest;
-import com.msa.user.model.response.OrderResponse;
-import com.msa.user.repository.OrderRepository;
+import com.msa.order.model.entity.Order;
+import com.msa.order.model.request.OrderCreateRequest;
+import com.msa.order.model.response.OrderResponse;
+import com.msa.order.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
