@@ -1,3 +1,16 @@
+#spring:
+#  application:
+#    name: order-service-dev
+#  config:
+#  #    import: optional:configserver:http://localhost8888
+#  cloud:
+#    config:
+#      uri: http://localhost:8888
+#  #      name: ecommerce
+#  profiles:
+#    active: dev
+
+
 #server:
 #  port: 60001 #Spring Cloud - Eureka 기본 서버포트
 #
