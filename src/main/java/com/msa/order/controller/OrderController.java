@@ -17,7 +17,7 @@ import java.util.List;
 * - Response Object는 처리 시 활용한 객체 상태/값들을 보여주는 목적으로 분리하지 않고 일괄 운용
 * */
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/")
 @RequiredArgsConstructor
 public class OrderController {
 
