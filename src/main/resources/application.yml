@@ -6,6 +6,12 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: root
+  kafka:
+    consumer:
+      group-id: order-dbsync-group
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      enable-auto-commit: false
   config:
     import: optional:configserver:http://localhost:8888
   cloud:
