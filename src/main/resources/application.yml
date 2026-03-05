@@ -1,6 +1,11 @@
 spring:
   application:
     name: order-service
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3307/orders #cloud-native-msa-user-mysql #Scaled out : 별도 설정
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
   config:
     import: optional:configserver:http://localhost:8888
   cloud:
@@ -10,8 +15,8 @@ spring:
   profiles:
     active: dev #활성화 대상
 
-#server:
-#  port: 60001 #Spring Cloud - Eureka 기본 서버포트
+server:
+  port: 60010 #Spring Cloud - Eureka 기본 서버포트 #Scaled out : 별도 설정
 #
 #eureka:
 #  instance:
