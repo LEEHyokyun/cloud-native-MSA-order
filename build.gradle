@@ -51,6 +51,11 @@ allprojects {
         implementation 'org.springframework.cloud:spring-cloud-starter-config'
 
         /*
+        * kafka
+        * */
+        implementation 'org.springframework.kafka:spring-kafka'
+
+        /*
         * actuator
         * */
         implementation 'org.springframework.boot:spring-boot-starter-actuator'
