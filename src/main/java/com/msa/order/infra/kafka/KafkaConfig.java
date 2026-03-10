@@ -31,7 +31,7 @@ public class KafkaConfig {
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
         configProps.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, valueSerializer);
-        configProps.put(ProducerConfig.ACKS_CONFIG, "all");
+        configProps.put(ProducerConfig.ACKS_CONFIG, "all"); //leader + replica까지 메시지 발행 완료 시 성공
 
         return new KafkaTemplate<>(new DefaultKafkaProducerFactory<>(configProps));
     }
