@@ -3,7 +3,7 @@ package com.msa.order.service;
 import com.msa.order.infra.event.Event;
 import com.msa.order.infra.event.EventType;
 import com.msa.order.infra.event.payload.OrderCreatedEventPayload;
-import com.msa.order.infra.kafka.KafkaEventPublisher;
+import com.msa.order.infra.event.eventpublisher.KafkaEventPublisher;
 import com.msa.order.model.entity.Order;
 import com.msa.order.model.request.OrderCreateRequest;
 import com.msa.order.model.response.OrderResponse;

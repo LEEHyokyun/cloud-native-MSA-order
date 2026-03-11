@@ -1,4 +1,4 @@
-package com.msa.order.infra.kafka;
+package com.msa.order.infra.event.eventpublisher;
 
 import com.msa.order.infra.event.Event;
 import lombok.RequiredArgsConstructor;
