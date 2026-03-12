@@ -1,6 +1,6 @@
-package com.msa.order.infra.event.eventpublisher;
+package com.msa.order.infra.kafka.event.eventpublisher;
 
-import com.msa.order.infra.event.Event;
+import com.msa.order.infra.kafka.event.Event;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.core.KafkaTemplate;

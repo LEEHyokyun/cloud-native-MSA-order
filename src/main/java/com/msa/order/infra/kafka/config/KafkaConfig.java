@@ -1,4 +1,4 @@
-package com.msa.order.infra.config;
+package com.msa.order.infra.kafka.config;
 
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;

@@ -1,7 +1,7 @@
-package com.msa.order.infra.event;
+package com.msa.order.infra.kafka.event;
 
-import com.msa.order.infra.event.payload.EventPayload;
-import com.msa.order.infra.event.payload.OrderCreatedEventPayload;
+import com.msa.order.infra.kafka.event.payload.EventPayload;
+import com.msa.order.infra.kafka.event.payload.OrderCreatedEventPayload;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

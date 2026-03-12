@@ -46,6 +46,13 @@ allprojects {
         implementation 'org.springframework.cloud:spring-cloud-starter-bus-amqp' // cloud bus push -> rabiitmq로 연결하기 위한 프로토콜
 
         /*
+        * Monitoring
+        * */
+        implementation 'org.springframework.boot:spring-boot-starter-actuator'
+        implementation 'io.micrometer:micrometer-registry-prometheus'
+        implementation 'io.micrometer:micrometer-observation'
+
+        /*
         * bootstrap
         **/
         implementation 'org.springframework.cloud:spring-cloud-starter-config'

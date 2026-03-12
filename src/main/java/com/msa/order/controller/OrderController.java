@@ -3,6 +3,7 @@ package com.msa.order.controller;
 import com.msa.order.model.request.OrderCreateRequest;
 import com.msa.order.model.response.OrderResponse;
 import com.msa.order.service.OrderService;
+import io.micrometer.observation.annotation.Observed;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -36,6 +37,14 @@ public class OrderController {
         return ResponseEntity.status(HttpStatus.OK).body(list);
     }
 
+    @Observed(
+            name = "read.order.orders",
+            contextualName = "[READ OREDER OF ONE USER]",
+            lowCardinalityKeyValues = {
+                    "SERVICE", "ORDER1-SERVICE",
+                    "OPERATION", "READ"
+            }
+    )
     @GetMapping("/orders/{userId}")
     public ResponseEntity<List<OrderResponse>> readOrderOfUser(@PathVariable("userId") Long userId){
 
