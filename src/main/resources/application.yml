@@ -1,20 +1,22 @@
 spring:
   application:
     name: order-service
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3307/orders #cloud-native-msa-user-mysql #Scaled out : 별도 설정
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: root
-  kafka:
-    bootstrap-servers: localhost:9092 # for producer
-    producer: #직렬화 설정없으면 기본 String to String
-      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#  datasource:
+#    url: jdbc:mysql://127.0.0.1:3307/orders #cloud-native-msa-user-mysql #Scaled out : 별도 설정
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: root
+#  kafka:
+#    bootstrap-servers: localhost:9092 # for producer
+#    producer: #직렬화 설정없으면 기본 String to String
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
   config:
-    import: optional:configserver:http://localhost:8888
-  cloud:
-    config:
-      uri: http://localhost:8888
+    import: configserver:http://config-server:8888
+#    import: optional:configserver:http://localhost:8888
+#  cloud:
+#    config:
+#      uri: http://config-server:8888
+#      uri: http://localhost:8888
   #      name: ecommerce
   profiles:
     active: dev #활성화 대상
